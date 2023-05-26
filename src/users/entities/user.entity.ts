@@ -12,7 +12,7 @@ import { Offer } from 'src/offers/entities/offers.entity';
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: string;
 
   @Column({ unique: true })
   username: string;

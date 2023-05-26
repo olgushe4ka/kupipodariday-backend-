@@ -10,13 +10,6 @@ import { OffersModule } from './offers/offers.module';
 
 import { User } from './users/entities/user.entity';
 
-// @Module({
-//   imports: [],
-//   controllers: [AppController],
-//   providers: [AppService],
-// })
-// export class AppModule {}
-
 @Module({
   imports: [
     TypeOrmModule.forRoot({
