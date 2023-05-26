@@ -37,6 +37,11 @@ export class UsersController {
   }
 
   @Get(':id')
+  async getUserById(@Param('id') id: string): Promise<User> {
+    return this.userService.findOne({ id });
+  }
+
+  @Get(':id')
   @UseGuards(AuthGuard('jwt'))
   async getUserProfile(@Param('id') id: string): Promise<User> {
     const user = await this.userService.findOne({ id });

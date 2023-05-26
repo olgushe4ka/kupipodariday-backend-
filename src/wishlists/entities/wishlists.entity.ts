@@ -14,7 +14,7 @@ import { Wish } from '../../wishes/entities/wishes.entity';
 @Entity()
 export class Wishlist {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: string;
 
   @CreateDateColumn()
   createdAt: Date;
