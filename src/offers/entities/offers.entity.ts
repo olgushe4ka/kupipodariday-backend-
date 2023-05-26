@@ -12,7 +12,7 @@ import { Wish } from '../../wishes/entities/wishes.entity';
 @Entity()
 export class Offer {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: string;
 
   @CreateDateColumn()
   createdAt: Date;

@@ -38,7 +38,22 @@ export class OffersService {
     return this.userRepository.update(query, update);
   }
 
-  async removeOne(query: Partial<Offer>): Promise<DeleteResult> {
-    return this.userRepository.delete(query);
+  //   async removeOne(query: Partial<Offer>): Promise<DeleteResult> {
+  //     return this.userRepository.delete(query);
+  //   }
+
+  async removeOne(condition: Partial<Offer>): Promise<DeleteResult> {
+    return this.userRepository.delete(condition);
   }
+
+  //   async removeOne(condition: Partial<Offer>): Promise<Offer> {
+  //     return this.userRepository.delete(condition).then((result) => {
+  //       if (result.affected > 0) {
+  //         const deletedOffer = this.userRepository.create(result.raw[0]);
+  //         return deletedOffer;
+  //       } else {
+  //         return null;
+  //       }
+  //     });
+  //   }
 }

@@ -1,13 +1,4 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Patch,
-  Delete,
-  UseGuards,
-  Body,
-  Param,
-} from '@nestjs/common';
+import { Controller, Get, Post, UseGuards, Body, Param } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import { WishlistsService } from './wishlists.service';
 import { Wishlist } from './entities/wishlists.entity';
